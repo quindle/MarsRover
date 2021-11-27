@@ -1,0 +1,39 @@
+version: '2'
+services:
+   mongo-db:
+     image: mongo:latest
+     container_name: mongo-server
+     environment:
+       - MONGO_INITDB_DATABASE=roverdb
+       - MONGO_INITDB_ROOT_USERNAME=admin
+       - MONGO_INITDB_ROOT_PASSWORD=rover
+     ports:
+       - "27017:27017"
+     networks:
+      - overlay
+     volumes:
+       - mongodb_data_container:/mongo/db
+       - ./mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
+   rover-api:
+     build:
+      context: .
+      dockerfile: ./MarsRoverApi/Dockerfile
+     mem_limit: 1000000000
+     mem_reservation: 256m
+     cpu_count: 2
+     cpu_percent: 50
+     ports:
+       - "8000:80"
+     depends_on:
+       - mongo-db
+     links:
+       - mongo-db
+     networks:
+       - overlay
+     restart: always
+volumes:
+  mongodb_data_container:
+networks:
+  overlay:
+  
+  
