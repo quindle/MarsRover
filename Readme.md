@@ -3,6 +3,8 @@
 
 Il progetto consiste in delle API REST sviluppate C# che permettono di controllano un rover che può viaggiare tra i pianeti e che si può muovere su di esse.
 
+Come data-store utilizza MongoDB
+
 Per far partire l'applicazione eseguire:
 
 ```
