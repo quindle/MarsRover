@@ -46,13 +46,12 @@ namespace MarsRoverApi
                 {
                     Title = "MarsRover API",
                     Version = "v1",
-                    Description = "MarsRover API tutorial using MongoDB",
+                    Description = "MarsRover API using MongoDB",
                 });
             });
 
 
-            services.AddMvc(); //.AddApplicationPart(Assembly.Load(new AssemblyName("MarsRoverMvc"))); //.SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
-                               // services.AddRazorPages();
+            services.AddMvc(); 
 
             
 
@@ -78,16 +77,15 @@ namespace MarsRoverApi
             });
 
 
-            //app.UseStaticFiles();
 
             app.UseRouting();
                         
-           // app.UseAuthorization();
+   
 
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
-                //endpoints.MapRazorPages();
+
             });
         }
     }
