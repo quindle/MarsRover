@@ -18,8 +18,8 @@ services:
      build:
       context: .
       dockerfile: ./MarsRoverApi/Dockerfile
-     mem_limit: 1000000000
-     mem_reservation: 256m
+     mem_limit: "1000000000"
+     mem_reservation: "256m"
      cpu_count: 2
      cpu_percent: 50
      ports:
