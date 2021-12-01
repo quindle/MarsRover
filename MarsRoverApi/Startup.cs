@@ -10,6 +10,7 @@ using Microsoft.Extensions.Hosting;
 using MongoDB.Driver;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
@@ -40,6 +41,7 @@ namespace MarsRoverApi
             services.AddSingleton<IPlanetService>(planetRepo);
             services.AddSingleton<IMongoClient, MongoClient>();
 
+            services.AddControllers();
             services.AddSwaggerGen(c =>
             {                
                 c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo
@@ -48,10 +50,13 @@ namespace MarsRoverApi
                     Version = "v1",
                     Description = "MarsRover API using MongoDB",
                 });
+
+                var filePath = Path.Combine(System.AppContext.BaseDirectory, "MarsRoverApi.xml");
+                c.IncludeXmlComments(filePath);
             });
 
 
-            services.AddMvc(); 
+            //services.AddMvc(); 
 
             
 

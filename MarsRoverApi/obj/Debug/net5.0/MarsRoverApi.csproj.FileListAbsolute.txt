@@ -1,11 +1,8 @@
-C:\Users\aleri\source\repos\MarsRover\MarsRoverApi\obj\Debug\net5.0\MarsRoverApi.csproj.AssemblyReference.cache
 C:\Users\aleri\source\repos\MarsRover\MarsRoverApi\obj\Debug\net5.0\MarsRoverApi.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\aleri\source\repos\MarsRover\MarsRoverApi\obj\Debug\net5.0\MarsRoverApi.AssemblyInfoInputs.cache
 C:\Users\aleri\source\repos\MarsRover\MarsRoverApi\obj\Debug\net5.0\MarsRoverApi.AssemblyInfo.cs
 C:\Users\aleri\source\repos\MarsRover\MarsRoverApi\obj\Debug\net5.0\MarsRoverApi.csproj.CoreCompileInputs.cache
 C:\Users\aleri\source\repos\MarsRover\MarsRoverApi\obj\Debug\net5.0\MarsRoverApi.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\aleri\source\repos\MarsRover\MarsRoverApi\obj\Debug\net5.0\MarsRoverApi.RazorAssemblyInfo.cache
-C:\Users\aleri\source\repos\MarsRover\MarsRoverApi\obj\Debug\net5.0\MarsRoverApi.RazorAssemblyInfo.cs
 C:\Users\aleri\source\repos\MarsRover\MarsRoverApi\bin\Debug\net5.0\appsettings.Development.json
 C:\Users\aleri\source\repos\MarsRover\MarsRoverApi\bin\Debug\net5.0\appsettings.json
 C:\Users\aleri\source\repos\MarsRover\MarsRoverApi\bin\Debug\net5.0\MarsRoverApi.exe
@@ -16,7 +13,6 @@ C:\Users\aleri\source\repos\MarsRover\MarsRoverApi\bin\Debug\net5.0\MarsRoverApi
 C:\Users\aleri\source\repos\MarsRover\MarsRoverApi\bin\Debug\net5.0\ref\MarsRoverApi.dll
 C:\Users\aleri\source\repos\MarsRover\MarsRoverApi\bin\Debug\net5.0\MarsRoverApi.pdb
 C:\Users\aleri\source\repos\MarsRover\MarsRoverApi\bin\Debug\net5.0\MarsRoverApi.Views.dll
-C:\Users\aleri\source\repos\MarsRover\MarsRoverApi\bin\Debug\net5.0\MarsRoverApi.Views.pdb
 C:\Users\aleri\source\repos\MarsRover\MarsRoverApi\bin\Debug\net5.0\DnsClient.dll
 C:\Users\aleri\source\repos\MarsRover\MarsRoverApi\bin\Debug\net5.0\MongoDB.Bson.dll
 C:\Users\aleri\source\repos\MarsRover\MarsRoverApi\bin\Debug\net5.0\MongoDB.Driver.dll
@@ -24,19 +20,7 @@ C:\Users\aleri\source\repos\MarsRover\MarsRoverApi\bin\Debug\net5.0\MongoDB.Driv
 C:\Users\aleri\source\repos\MarsRover\MarsRoverApi\obj\Debug\net5.0\staticwebassets\MarsRoverApi.StaticWebAssets.Manifest.cache
 C:\Users\aleri\source\repos\MarsRover\MarsRoverApi\obj\Debug\net5.0\staticwebassets\MarsRoverApi.StaticWebAssets.xml
 C:\Users\aleri\source\repos\MarsRover\MarsRoverApi\obj\Debug\net5.0\scopedcss\bundle\MarsRoverApi.styles.css
-C:\Users\aleri\source\repos\MarsRover\MarsRoverApi\obj\Debug\net5.0\MarsRoverApi.TagHelpers.input.cache
-C:\Users\aleri\source\repos\MarsRover\MarsRoverApi\obj\Debug\net5.0\MarsRoverApi.TagHelpers.output.cache
-C:\Users\aleri\source\repos\MarsRover\MarsRoverApi\obj\Debug\net5.0\MarsRoverApi.RazorCoreGenerate.cache
-C:\Users\aleri\source\repos\MarsRover\MarsRoverApi\obj\Debug\net5.0\Razor\Pages\Error.cshtml.g.cs
-C:\Users\aleri\source\repos\MarsRover\MarsRoverApi\obj\Debug\net5.0\Razor\Pages\Index.cshtml.g.cs
-C:\Users\aleri\source\repos\MarsRover\MarsRoverApi\obj\Debug\net5.0\Razor\Pages\Privacy.cshtml.g.cs
-C:\Users\aleri\source\repos\MarsRover\MarsRoverApi\obj\Debug\net5.0\Razor\Pages\Shared\_Layout.cshtml.g.cs
-C:\Users\aleri\source\repos\MarsRover\MarsRoverApi\obj\Debug\net5.0\Razor\Pages\Shared\_ValidationScriptsPartial.cshtml.g.cs
-C:\Users\aleri\source\repos\MarsRover\MarsRoverApi\obj\Debug\net5.0\Razor\Pages\_ViewImports.cshtml.g.cs
-C:\Users\aleri\source\repos\MarsRover\MarsRoverApi\obj\Debug\net5.0\Razor\Pages\_ViewStart.cshtml.g.cs
 C:\Users\aleri\source\repos\MarsRover\MarsRoverApi\obj\Debug\net5.0\MarsRoverApi.RazorTargetAssemblyInfo.cache
-C:\Users\aleri\source\repos\MarsRover\MarsRoverApi\obj\Debug\net5.0\MarsRoverApi.RazorTargetAssemblyInfo.cs
-C:\Users\aleri\source\repos\MarsRover\MarsRoverApi\obj\Debug\net5.0\MarsRoverApi.Views.pdb
 C:\Users\aleri\source\repos\MarsRover\MarsRoverApi\obj\Debug\net5.0\MarsRoverApi.csproj.CopyComplete
 C:\Users\aleri\source\repos\MarsRover\MarsRoverApi\obj\Debug\net5.0\MarsRoverApi.dll
 C:\Users\aleri\source\repos\MarsRover\MarsRoverApi\obj\Debug\net5.0\ref\MarsRoverApi.dll
@@ -59,3 +43,5 @@ C:\Users\aleri\source\repos\MarsRover\MarsRoverApi\bin\Debug\net5.0\Swashbuckle.
 C:\Users\aleri\source\repos\MarsRover\MarsRoverApi\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\aleri\source\repos\MarsRover\MarsRoverApi\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Users\aleri\source\repos\MarsRover\MarsRoverApi\obj\Debug\net5.0\MarsRoverApi.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\aleri\source\repos\MarsRover\MarsRoverApi\bin\Debug\net5.0\MarsRoverApi.xml
+C:\Users\aleri\source\repos\MarsRover\MarsRoverApi\obj\Debug\net5.0\MarsRoverApi.csproj.AssemblyReference.cache

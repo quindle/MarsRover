@@ -15,7 +15,11 @@ namespace MarsRoverApi.Services
 
         Task Create(Planet planet);
 
-        Task<bool> Destroy(string name);               
+        Task<bool> Destroy(string name);
+
+        Task<Planet> AddObstacle(Planet planet,Item obstacle);
+
+        Task<bool> RemoveObstacle(Planet planet, string obstacleName);
 
     }
 }

@@ -16,5 +16,9 @@ namespace MarsRoverApi.Services
         Task Launch(Rover rover);
 
         Task<bool> Retrieve(string name);
+
+        Task<bool> Land(Rover rover, Planet planet, Location? position);
+
+        Task Move(Rover rover, string complexCommand);
     }
 }

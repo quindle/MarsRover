@@ -1,0 +1,311 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MarsRoverApi</name>
+    </assembly>
+    <members>
+        <member name="T:MarsRoverApi.Controllers.PlanetController">
+            <summary>
+            Controller dei Pianeti
+            </summary>
+        </member>
+        <member name="M:MarsRoverApi.Controllers.PlanetController.#ctor(MarsRoverApi.Services.IPlanetService)">
+            <summary>
+            Costruttore per il controllore dei pianeti
+            </summary>
+            <param name="service">implementazione di IPlanetService</param>
+        </member>
+        <member name="M:MarsRoverApi.Controllers.PlanetController.Get">
+            <summary>
+            Mostra la lista di tutti i pianeti
+            </summary>
+            <returns>Lista dei pianeti presenti</returns>
+            <remarks>
+            Sample request:
+               GET api/planets/Mars
+            </remarks>
+        </member>
+        <member name="M:MarsRoverApi.Controllers.PlanetController.Get(System.String)">
+            <summary>
+            Mostra i dati di uno specifico pianeta
+            </summary>
+            <param name="name">Nome del pianeta</param>
+            <returns>Pianeta</returns>
+             <remarks>
+            Sample request:
+               GET api/planets/Mars
+            </remarks>
+        </member>
+        <member name="M:MarsRoverApi.Controllers.PlanetController.Put(System.String,MarsRoverApi.Models.Location)">
+            <summary>
+            Aggiuni un ostacolo al pianeta
+            </summary>
+            <param name="name">Nome del pianeta</param>
+            <returns>Pianeta</returns>
+        </member>
+        <member name="M:MarsRoverApi.Controllers.PlanetController.Post(MarsRoverApi.Models.Planet)">
+             <summary>
+             Crea un nuovo pianeta
+             </summary>
+             <param name="planet"></param>
+             <returns>Il pianeta Creato</returns>
+             <remarks>
+             Sample request:
+            
+                 POST /planets
+                 {
+                    "row": 10,
+                    "columns": 10,
+                    "name": "Mars"
+                 }
+            
+             </remarks>
+        </member>
+        <member name="M:MarsRoverApi.Controllers.PlanetController.Delete(System.String)">
+             <summary>
+             Distrugge un pianeta
+             </summary>
+             <param name="name"></param>
+             <returns></returns>
+             <remarks>
+             Sample request:
+            
+                 DELETE api/planets/Mars
+             </remarks>
+        </member>
+        <member name="T:MarsRoverApi.Controllers.RoverController">
+            <summary>
+            API lanciare, controllare e recuperare i rover
+            </summary>
+        </member>
+        <member name="M:MarsRoverApi.Controllers.RoverController.#ctor(MarsRoverApi.Services.IRoverService,MarsRoverApi.Services.IPlanetService)">
+            <summary>
+            Costruttore per RoverController
+            </summary>
+            <param name="service">roverService</param>
+            <param name="planetService">planetService</param>
+        </member>
+        <member name="M:MarsRoverApi.Controllers.RoverController.Get">
+            <summary>
+            Mostra la lista di tutti i Rover
+            </summary>
+            <returns>Lista dei Rover esistenti</returns>
+        </member>
+        <member name="M:MarsRoverApi.Controllers.RoverController.Get(System.String)">
+            <summary>
+            Mostra i dati di uno specifico Rover
+            </summary>
+            <param name="name">nome del rover da cercare</param>
+            <returns>Rover</returns>
+        </member>
+        <member name="M:MarsRoverApi.Controllers.RoverController.Move(System.String,System.String)">
+            <summary>
+            Muove un rover sulla superficie del pianeta seguendo i comandi dati in input
+            </summary>
+            <param name="name">Nome del rover</param>
+            <param name="commands">stringa di comandi concatenati da eseguire nell'alfabeto {l = left; r= right; f=forward; b= backward }</param>
+            <returns></returns>
+        </member>
+        <member name="M:MarsRoverApi.Controllers.RoverController.Post(System.String,System.String,MarsRoverApi.Models.Location)">
+            <summary>
+            Fai "atterrare" un Rover su un pianeta
+            </summary>
+            <param name="roverName">Nome del Rover</param>
+            <param name="planetName">Pianeta sul quale atterrare</param>
+            <param name="position">Posizione sul quale atterrare</param>
+            <returns>Rover</returns>
+        </member>
+        <member name="M:MarsRoverApi.Controllers.RoverController.Delete(System.String)">
+            <summary>
+            Fa rientrare un rover
+            </summary>
+            <param name="name">fa rientrare un rover ovunque esso sia</param>
+            <returns></returns>
+        </member>
+        <member name="T:MarsRoverApi.Models.CardinalPoint">
+            <summary>
+            Rappresenta l'orientamento
+            </summary>
+        </member>
+        <member name="F:MarsRoverApi.Models.CardinalPoint.N">
+            <summary>
+            NORTH
+            </summary>
+        </member>
+        <member name="F:MarsRoverApi.Models.CardinalPoint.E">
+            <summary>
+            EST
+            </summary>
+        </member>
+        <member name="F:MarsRoverApi.Models.CardinalPoint.S">
+                     /// <summary>
+            SOUTH 
+             </summary>
+        </member>
+        <member name="F:MarsRoverApi.Models.CardinalPoint.W">
+            <summary>
+            WEST
+            </summary>
+        </member>
+        <member name="T:MarsRoverApi.Models.Item">
+            <summary>
+            Rappresenta qualunque oggetto con una posizione
+            </summary>
+        </member>
+        <member name="P:MarsRoverApi.Models.Item.Position">
+            <summary>
+            Indica la posizione sul pianeta
+            </summary>
+        </member>
+        <member name="T:MarsRoverApi.Models.Location">
+            <summary>
+            Posizione sulla superficie di un pianeta
+            </summary>
+        </member>
+        <member name="P:MarsRoverApi.Models.Location.Row">
+            <summary>
+            coordinate Y
+            </summary>
+        </member>
+        <member name="P:MarsRoverApi.Models.Location.Column">
+            <summary>
+            Coordinata X
+            </summary>
+        </member>
+        <member name="T:MarsRoverApi.Models.Planet">
+            <summary>
+            Oggetto che rappresenta un pianeta
+            </summary>
+        </member>
+        <member name="P:MarsRoverApi.Models.Planet.InternalId">
+            <summary>
+            Internal ID di MongoDB
+            </summary>
+        </member>
+        <member name="P:MarsRoverApi.Models.Planet.Rows">
+            <summary>
+            Numero di righe del pianeta
+            </summary>
+        </member>
+        <member name="P:MarsRoverApi.Models.Planet.Columns">
+            <summary>
+            Numero di colonne del pianeta
+            </summary>
+        </member>
+        <member name="P:MarsRoverApi.Models.Planet.Name">
+            <summary>
+            Nome del pianeta
+            </summary>
+        </member>
+        <member name="P:MarsRoverApi.Models.Planet.Obstacles">
+            <summary>
+            Ostacoli sul pianeta
+            </summary>
+        </member>
+        <member name="T:MarsRoverApi.Models.Rover">
+            <summary>
+            Oggetto che rappresenta un Rover
+            </summary>
+        </member>
+        <member name="P:MarsRoverApi.Models.Rover.InternalId">
+            <summary>
+            Identificativo interno  di MongoDB
+            </summary>
+        </member>
+        <member name="P:MarsRoverApi.Models.Rover.Planet">
+            <summary>
+            Pianeta sul quale è presente il Rover
+            </summary>
+        </member>
+        <member name="P:MarsRoverApi.Models.Rover.PlanetName">
+            <summary>
+            Nome del pianeta
+            </summary>
+        </member>
+        <member name="P:MarsRoverApi.Models.Rover.Orientation">
+            <summary>
+            Orientamento del Rover (N,S,E,W)
+            </summary>
+        </member>
+        <member name="P:MarsRoverApi.Models.Rover.IsLanded">
+            <summary>
+            Indica se il Rover è atterrato su un pianeta
+            </summary>
+        </member>
+        <member name="M:MarsRoverApi.Models.Rover.Right">
+            <summary>
+            Ruota di novanta gradi a destra
+            </summary>
+        </member>
+        <member name="M:MarsRoverApi.Models.Rover.Left">
+            <summary>
+            Ruota di 90 gradi asinistra
+            </summary>
+        </member>
+        <member name="M:MarsRoverApi.Models.Rover.Forward">
+            <summary>
+            Muove in avanti di una posizione
+            </summary>
+        </member>
+        <member name="M:MarsRoverApi.Models.Rover.Backward">
+            <summary>
+            Muove indietro di una posizione
+            </summary>
+        </member>
+        <member name="M:MarsRoverApi.Models.Rover.Land(MarsRoverApi.Models.Planet)">
+            <summary>
+            Atterra su un pianeta
+            </summary>
+            <param name="planetToLand"></param>
+        </member>
+        <member name="M:MarsRoverApi.Services.RoverService.#ctor(MarsRoverApi.MongoDB.IMarsRoverContext)">
+            <summary>
+            Costruttore RoverService
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:MarsRoverApi.Services.RoverService.Retrieve(System.String)">
+            <summary>
+            Rimuove il rover ovunque esso sia
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MarsRoverApi.Services.RoverService.GetAllRovers">
+            <summary>
+            Restituisce l'elenco dei Rover
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MarsRoverApi.Services.RoverService.GetRoverByName(System.String)">
+            <summary>
+            Ricerca un Rover dal suo nome
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MarsRoverApi.Services.RoverService.Launch(MarsRoverApi.Models.Rover)">
+            <summary>
+            Crea un nuovo Rover
+            </summary>
+            <param name="rover"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MarsRoverApi.Services.RoverService.Land(MarsRoverApi.Models.Rover,MarsRoverApi.Models.Planet,MarsRoverApi.Models.Location)">
+            <summary>
+            Fa atterrare un rover su un Pianeta
+            </summary>
+            <param name="rover">Rover che deve atterrare</param>
+            <param name="planetToLand">Pianeta di destinazion</param>
+            <param name="position">Posizione di atterraggio</param>
+            <returns></returns>
+        </member>
+        <member name="M:MarsRoverApi.Services.RoverService.Move(MarsRoverApi.Models.Rover,System.String)">
+            <summary>
+            Muovi il rover secondo i comandi ricevuti
+            </summary>
+            <param name="rover">rover da muovere</param>
+            <param name="complexCommand">comandi da eseguire</param>
+        </member>
+    </members>
+</doc>
